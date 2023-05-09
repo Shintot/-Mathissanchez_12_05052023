@@ -1,0 +1,33 @@
+.recharts-rectangle {
+    stroke-width: 2 !important;
+}
+
+.Act {
+    background-color: #f8f8f8;
+    border-radius: 1rem;
+    padding: 2rem 2rem 2rem 2rem;
+    margin-left: 9rem;
+    width: 80%;
+
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+
+}
+
+@media (min-width: 900px) and (max-width: 1270px) {
+    .Act {
+        width: 70%;
+        height: 15rem;
+    }
+
+    .activite {
+        text-align: left;
+        margin-bottom: 0 !important;
+    }
+}
+
+
+.activite {
+    text-align: left;
+    margin-bottom: 1rem;
+}
+

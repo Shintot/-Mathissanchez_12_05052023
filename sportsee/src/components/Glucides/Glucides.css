@@ -1,0 +1,42 @@
+.contenant {
+    height: 150px;
+    width: 320px;
+    background-color: #f8f8f8;
+    border-radius: 1rem;
+    display: flex;
+
+}
+
+@media (min-width: 900px) and (max-width: 1270px){
+  .contenant {
+     height: 100px !important;
+    width: 220px !important;
+      margin-left: 2% !important;
+  }
+
+    .test{
+        margin: 1.5rem !important;
+        text-align: center !important;
+    }
+}
+
+.contenanticonG {
+    background-color: #fff6ad;
+    width: 4rem;
+    height: 4rem;
+    padding: 0 0 0.3rem 0;
+    border-radius: 0.7rem;
+    margin: auto;
+
+}
+
+.test {
+    margin: 3rem 5rem 0 0;
+}
+
+.tes {
+      margin-top: 0.9rem;
+  color: #efdb43;
+  width: 40px;
+  height: 40px;
+}

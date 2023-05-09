@@ -1,0 +1,19 @@
+.score {
+    width: 17rem;
+    height: 13rem;
+    margin-left: 5rem;
+    background-color: #f8f8f8;
+    padding: 1rem;
+ box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
+ border-radius: 1rem;
+}
+
+@media (min-width: 900px) and (max-width: 1270px){
+  .score {
+      width: 30% !important;
+      height: 10rem !important;
+      margin-left: 1rem !important;
+  }
+
+
+}

@@ -1,0 +1,23 @@
+
+.fond {
+    width: 20rem;
+    height: 15rem;
+    margin-left: 11%;
+    background-color: #b12c2c;
+
+    border-radius: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+
+@media (min-width: 900px) and (max-width: 1270px){
+  .fond {
+      width: 33% !important;
+      height: 12rem ;
+
+  }
+}
+
+.line {
+    margin-top: 4rem;
+}
+
