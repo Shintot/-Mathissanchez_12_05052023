@@ -6,6 +6,11 @@ import {BiDumbbell} from 'react-icons/bi';
 import {GiMeditation} from 'react-icons/gi';
 
 
+/**
+ * Composant représentant la barre de navigation verticale.
+ * @function
+ * @returns {JSX.Element} Composant de barre de navigation verticale.
+ */
 function NavbarV() {
     return (
         <nav className="navbarv">

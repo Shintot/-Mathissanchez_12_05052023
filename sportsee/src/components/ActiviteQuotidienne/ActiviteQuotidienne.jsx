@@ -1,8 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import Chart from 'react-apexcharts';
+import PropTypes from 'prop-types'; // Importer PropTypes depuis 'prop-types'
 import { fetchActivity } from '../../api';
 import './ActiviteQuotidienne.css';
 
+
+/**
+ * Composant pour afficher l'activité quotidienne d'un utilisateur sous forme de graphique.
+ *
+ * @param {Object} props - Les propriétés du composant.
+ * @param {number} props.id - L'ID de l'utilisateur.
+ *
+ * @example
+ * <ActiviteQuotidienne id="123456789"/>
+ *
+ * @returns {JSX.Element} Composant pour afficher l'activité quotidienne.
+ */
 const ActiviteQuotidienne = ({ id }) => {
   const [chartData, setChartData] = useState([]);
 
@@ -27,9 +40,18 @@ const ActiviteQuotidienne = ({ id }) => {
     plotOptions: {
       bar: {
         columnWidth: '20%',
-         barWidth: '60%',
+        barWidth: '60%',
+        borderRadius: 3,
       },
     },
+    dataLabels: {
+          enabled: false
+        },
+    stroke: {
+          show: true,
+          width: 3,
+          colors: ['transparent']
+        },
     xaxis: {
       categories: chartData.map(data => data.name),
     },
@@ -94,6 +116,10 @@ const ActiviteQuotidienne = ({ id }) => {
       </div>
 
   );
+};
+
+ActiviteQuotidienne.propTypes = {
+  id: PropTypes.number.isRequired, // Ajouter un propTypes pour l'ID en tant que chaîne de caractères requise
 };
 
 export default ActiviteQuotidienne;

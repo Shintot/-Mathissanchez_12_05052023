@@ -2,7 +2,19 @@ import React, {useEffect, useState} from 'react';
 import Chart from 'react-apexcharts';
 import {fetchScore} from '../../api';
 import './Score.css'
+import PropTypes from "prop-types";
 
+/**
+ * Composant qui affiche un graphique en forme de barre radiale représentant le score de l'utilisateur.
+ *
+ * @component
+ * @param {object} props - Les propriétés du composant.
+ * @param {number} props.id - L'identifiant de l'utilisateur.
+ * @returns {JSX.Element} - Le composant BasicRadialBarChart.
+ *
+ * @example
+ * <BasicRadialBarChart id={123} />
+ */
 const BasicRadialBarChart = ({id}) => {
     const [score, setScore] = useState(0);
     useEffect(() => {
@@ -82,6 +94,10 @@ const BasicRadialBarChart = ({id}) => {
             </div>
         </div>
     );
+};
+
+BasicRadialBarChart.propTypes = {
+  id: PropTypes.number.isRequired,
 };
 
 export default BasicRadialBarChart;

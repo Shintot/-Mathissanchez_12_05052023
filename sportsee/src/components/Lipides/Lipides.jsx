@@ -1,8 +1,15 @@
-import './Lipides.css'
+import PropTypes from 'prop-types';
+import './Lipides.css';
 import { FaHamburger } from "react-icons/fa";
 import { useEffect, useState } from 'react';
 import {fetchLipides} from "../../api";
 
+/**
+ * Affiche le nombre de lipides consommés par l'utilisateur.
+ * @param {object} props - Les propriétés du composant.
+ * @param {number} props.id - L'identifiant de l'utilisateur.
+ * @return {JSX.Element} - Le composant UserCalories.
+ */
 const UserCalories = ({ id }) => {
     const [lipidesCount, setLipidesCount] = useState('');
 
@@ -27,6 +34,10 @@ const UserCalories = ({ id }) => {
             </div>
         </div>
     );
+};
+
+UserCalories.propTypes = {
+  id: PropTypes.number.isRequired,
 };
 
 export default UserCalories;

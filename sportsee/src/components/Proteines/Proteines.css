@@ -7,6 +7,16 @@
     box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
 }
 
+@media (min-width: 900px) and (max-width: 1270px) {
+
+    .t {
+        margin-top: 1.2rem !important;
+        color: #6b8bfa;
+        width: 30px !important;
+        height: 30px !important;
+    }
+}
+
 .contenanticon {
     background-color: #e3edf6;
     width: 4rem;
@@ -22,8 +32,8 @@
 }
 
 .t {
-     margin-top: 0.9rem;
-  color: #6b8bfa;
-  width: 40px;
-  height: 40px;
+    margin-top: 0.9rem;
+    color: #6b8bfa;
+    width: 40px;
+    height: 40px;
 }

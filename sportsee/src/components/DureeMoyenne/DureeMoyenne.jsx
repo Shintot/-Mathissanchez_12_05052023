@@ -2,7 +2,17 @@ import React, { useEffect, useState } from 'react';
 import Chart from 'react-apexcharts';
 import './DureeMoyenne.css';
 import { fetchAverageSessions } from '../../api';
+import PropTypes from 'prop-types';
 
+
+/**
+ * Composant DureeMoyenne affichant un graphique de la durée moyenne des sessions par jour de la semaine.
+ * @param {Object} props - Les props passés au composant.
+ * @param {string} props.id - L'ID de l'utilisateur.
+ * @returns {JSX.Element} - Le composant DureeMoyenne.
+ * @example
+ * <DureeMoyenne id="123456"/>
+ */
 const DureeMoyenne = ({ id }) => {
   const [chartData, setChartData] = useState([]);
 
@@ -17,17 +27,17 @@ const DureeMoyenne = ({ id }) => {
   }, [id]);
 
   const convertToDayOfWeek = (name) => {
-  const dayMapping = {
-    "jour 1": "L",
-    "jour 2": "M",
-    "jour 3": "M",
-    "jour 4": "J",
-    "jour 5": "V",
-    "jour 6": "S",
-    "jour 7": "D",
+    const dayMapping = {
+      "jour 1": "L",
+      "jour 2": "M",
+      "jour 3": "M",
+      "jour 4": "J",
+      "jour 5": "V",
+      "jour 6": "S",
+      "jour 7": "D",
+    };
+    return dayMapping[name] || name;
   };
-  return dayMapping[name] || name;
-};
 
   const options = {
     colors: ['#ffffff'],
@@ -70,7 +80,7 @@ const DureeMoyenne = ({ id }) => {
       },
     },
     tooltip: {
-      enabled: false, // Désactiver la bulle d'aide
+      enabled: true, // Désactiver la bulle d'aide
     },
     stroke: {
       curve: 'smooth',
@@ -114,6 +124,10 @@ const DureeMoyenne = ({ id }) => {
       </div>
     </div>
   );
+};
+
+DureeMoyenne.propTypes = {
+  id: PropTypes.number.isRequired,
 };
 
 export default DureeMoyenne;

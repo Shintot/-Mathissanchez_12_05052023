@@ -21,9 +21,19 @@
     margin: 3rem 5rem 0 0;
 }
 
+@media (min-width: 900px) and (max-width: 1270px) {
+
+    .aas {
+        margin-top: 1.2rem !important;
+        color: #6b8bfa;
+        width: 30px !important;
+        height: 30px !important;
+    }
+}
+
 .aas {
     margin-top: 0.9rem;
-  color: #e8a6ff;
-  width: 40px;
-  height: 40px;
+    color: #e8a6ff;
+    width: 40px;
+    height: 40px;
 }

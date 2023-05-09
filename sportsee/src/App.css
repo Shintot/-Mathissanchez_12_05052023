@@ -15,8 +15,10 @@
 
 .btnid {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 1.5rem;
+  right: 2rem;
+  background-color: #b12c2c;
+  border-radius: 1rem;
   z-index: 10000;
 }
 
@@ -84,3 +86,5 @@
     height: 10rem;
     background-color: #b12c2c;
 }
+
+

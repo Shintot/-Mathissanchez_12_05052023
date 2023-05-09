@@ -7,16 +7,30 @@
 
 }
 
-@media (min-width: 900px) and (max-width: 1270px){
-  .contenant {
-     height: 100px !important;
-    width: 220px !important;
-      margin-left: 2% !important;
-  }
+@media (min-width: 900px) and (max-width: 1270px) {
+    .contenant {
+        height: 100px !important;
+        width: 220px !important;
+        margin-left: 2% !important;
+    }
 
-    .test{
+    .test {
         margin: 1.5rem !important;
         text-align: center !important;
+    }
+
+    .icon {
+        margin-top: 1.2rem;
+        color: red;
+        width: 30px;
+        height: 30px;
+    }
+
+    .tes {
+        margin-top: 1.2rem !important;
+        color: #6b8bfa;
+        width: 30px !important;
+        height: 30px !important;
     }
 }
 
@@ -27,7 +41,6 @@
     padding: 0 0 0.3rem 0;
     border-radius: 0.7rem;
     margin: auto;
-
 }
 
 .test {
@@ -35,8 +48,8 @@
 }
 
 .tes {
-      margin-top: 0.9rem;
-  color: #efdb43;
-  width: 40px;
-  height: 40px;
+    margin-top: 0.9rem;
+    color: #efdb43;
+    width: 40px;
+    height: 40px;
 }

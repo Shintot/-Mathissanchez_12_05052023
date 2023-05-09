@@ -1,13 +1,26 @@
-import './Proteines.css'
+import PropTypes from 'prop-types';
+import './Proteines.css';
 import {GiMeal} from "react-icons/gi";
 import { useEffect, useState } from 'react';
 import {fetchProteines} from "../../api";
 
+
+/**
+ * Composant UserProteines affichant les informations sur les protéines consommées par l'utilisateur.
+ *
+ * @param {object} props - Les propriétés du composant.
+ * @param {number} props.id - L'identifiant de l'utilisateur.
+ *
+ * @returns {JSX.Element} - Le composant UserProteines.
+ *
+ * @example
+ * <UserProteines id={1} />
+ */
 const UserProteines = ({ id }) => {
   const [proteines, setProteines] = useState(0);
 
   useEffect(() => {
-    fetchProteines(id ) // appel à fetchProteines avec l'ID de l'utilisateur
+    fetchProteines(id) // appel à fetchProteines avec l'ID de l'utilisateur
       .then(newProteines => {
         setProteines(newProteines);
       })
@@ -27,6 +40,10 @@ const UserProteines = ({ id }) => {
       </div>
     </div>
   );
+};
+
+UserProteines.propTypes = {
+  id: PropTypes.number.isRequired,
 };
 
 export default UserProteines;
