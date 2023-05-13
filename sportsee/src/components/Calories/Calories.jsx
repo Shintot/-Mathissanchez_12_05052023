@@ -1,16 +1,17 @@
 import './Calories.css';
 import { BsFire } from 'react-icons/bs';
 import { useEffect, useState } from 'react';
-import { fetchCalories } from "../../api";
+
 import PropTypes from 'prop-types';
 
 
 /**
  * Composant qui affiche le nombre de calories consommées par un utilisateur.
  * @param {string} id - L'identifiant de l'utilisateur.
+ * @param fetchCalories
  * @returns {JSX.Element} - Le composant UserCalories.
  */
-const UserCalories = ({ id }) => {
+const UserCalories = ({ id , fetchCalories}) => {
   const [calories, setCalories] = useState('');
 
   useEffect(() => {

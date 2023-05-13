@@ -2,7 +2,7 @@ import './Glucides.css';
 import { GiShinyApple } from 'react-icons/gi';
 import { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import { fetchGlucides } from '../../api';
+
 
 /**
  * Composant qui affiche la quantité de glucides consommée par l'utilisateur.
@@ -15,7 +15,7 @@ import { fetchGlucides } from '../../api';
  * @example
  * <UserGlucides id="1234567890" />
  */
-const UserGlucides = ({ id }) => {
+const UserGlucides = ({ id,fetchGlucides }) => {
   const [glucide, setGlucide] = useState(0);
 
   useEffect(() => {

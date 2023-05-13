@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Chart from 'react-apexcharts';
 import PropTypes from 'prop-types'; // Importer PropTypes depuis 'prop-types'
-import { fetchActivity } from '../../api';
 import './ActiviteQuotidienne.css';
 
 
@@ -16,7 +15,7 @@ import './ActiviteQuotidienne.css';
  *
  * @returns {JSX.Element} Composant pour afficher l'activité quotidienne.
  */
-const ActiviteQuotidienne = ({ id }) => {
+const ActiviteQuotidienne = ({ id , fetchActivity}) => {
   const [chartData, setChartData] = useState([]);
 
   useEffect(() => {
@@ -60,6 +59,8 @@ const ActiviteQuotidienne = ({ id }) => {
     },
     tooltip: {
       enabled: true,
+      shared: true,
+      intersect: false
     },
     colors: ['#EB0018', '#000000'],
     legend: {
@@ -68,22 +69,14 @@ const ActiviteQuotidienne = ({ id }) => {
     },
     responsive: [
       {
-        breakpoint: 480,
+        breakpoint: 1200,
         options: {
-          chart: {
-            width: '100%',
-            height: 450,
-          },
-          xaxis: {
-            labels: {
-              show: false,
-            },
-          },
-          yaxis: {
-            labels: {
-              show: false,
-            },
-          },
+         plotOptions: {
+        bar: {
+          columnWidth: '30%',
+        },
+      },
+
         },
       },
     ],

@@ -1,64 +1,75 @@
 .App {
-  text-align: center;
+    text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+    height: 40vmin;
+    pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
+}
+
+.erreur{
+    font-size: 200px;
+    text-align: center;
+    color: #de0707;
+    margin-bottom: 1rem;
+}
+
+.erreurtxt {
+    text-align: center;
+     color: #de0707;
+    font-size: 20px;
 }
 
 .btnid {
-  position: absolute;
-  top: 1.5rem;
-  right: 2rem;
-  background-color: #b12c2c;
-  border-radius: 1rem;
-  z-index: 10000;
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+    background-color: #b12c2c;
+    border-radius: 1rem;
+    z-index: 10000;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
 }
 
 .App-link {
-  color: #61dafb;
+    color: #61dafb;
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
-.graphUn{
-  margin-left: 10rem;
+.graphUn {
+    margin-left: 10rem;
 
 }
 
 .trio {
-  display: flex;
-  justify-content: flex-start;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 3rem;
     margin-left: 3rem;
 }
-
 
 
 .flex {
@@ -66,20 +77,19 @@
 }
 
 
-
 .espace {
     margin-left: 10%;
     height: 9rem;
 }
 
-@media (min-width: 900px) and (max-width: 1270px){
-  .espace {
-      margin-left: 8% !important;
-  }
+@media (min-width: 900px) and (max-width: 1270px) {
+    .espace {
+        margin-left: 8% !important;
+    }
 
-  .trio {
-    margin-top: 2rem;
-  }
+    .trio {
+        margin-top: 2rem;
+    }
 }
 
 .poussoir {

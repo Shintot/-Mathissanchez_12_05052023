@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import Chart from 'react-apexcharts';
-import {fetchScore} from '../../api';
+
 import './Score.css'
 import PropTypes from "prop-types";
 
@@ -15,7 +15,7 @@ import PropTypes from "prop-types";
  * @example
  * <BasicRadialBarChart id={123} />
  */
-const BasicRadialBarChart = ({id}) => {
+const BasicRadialBarChart = ({ id,fetchScore}) => {
     const [score, setScore] = useState(0);
     useEffect(() => {
         fetchScore(id) // appel à fetchScoreData avec l'ID de l'utilisateur

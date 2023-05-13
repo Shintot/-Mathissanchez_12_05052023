@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Chart from 'react-apexcharts';
 import './DureeMoyenne.css';
-import { fetchAverageSessions } from '../../api';
+
 import PropTypes from 'prop-types';
 
 
@@ -13,7 +13,7 @@ import PropTypes from 'prop-types';
  * @example
  * <DureeMoyenne id="123456"/>
  */
-const DureeMoyenne = ({ id }) => {
+const DureeMoyenne = ({ id , fetchAverageSessions}) => {
   const [chartData, setChartData] = useState([]);
 
   useEffect(() => {
@@ -26,51 +26,40 @@ const DureeMoyenne = ({ id }) => {
       });
   }, [id]);
 
-  const convertToDayOfWeek = (name) => {
-    const dayMapping = {
-      "jour 1": "L",
-      "jour 2": "M",
-      "jour 3": "M",
-      "jour 4": "J",
-      "jour 5": "V",
-      "jour 6": "S",
-      "jour 7": "D",
-    };
-    return dayMapping[name] || name;
-  };
+
 
   const options = {
     colors: ['#ffffff'],
     chart: {
       type: 'line',
       toolbar: {
-        show: false, // Désactiver les icônes de navigation
+        show: false,
       },
     },
     grid: {
-      show: false, // Ne pas afficher la grille
+      show: false,
     },
     dataLabels: {
       enabled: false,
     },
     xaxis: {
       type: 'category',
-      categories: chartData.map((data) => convertToDayOfWeek(data.name)), // Utiliser la fonction de conversion pour les noms
+      categories: ['L', 'M', 'M', 'J', 'V', 'S', 'D'],
       labels: {
         style: {
           colors: '#ffffff',
         },
       },
       axisBorder: {
-        show: false, // Ne pas afficher les bordures de l'axe
+        show: false,
       },
       axisTicks: {
-        show: false, // Ne pas afficher les marques de graduation
+        show: false,
       },
     },
     yaxis: {
       labels: {
-        show: false, // Ne pas afficher les étiquettes de l'axe y
+        show: false,
       },
       axisBorder: {
         show: false,
@@ -80,10 +69,11 @@ const DureeMoyenne = ({ id }) => {
       },
     },
     tooltip: {
-      enabled: true, // Désactiver la bulle d'aide
+      enabled: true,
     },
     stroke: {
       curve: 'smooth',
+      width: 3,
     },
     markers: {
       size: 0,
@@ -93,7 +83,7 @@ const DureeMoyenne = ({ id }) => {
     },
     responsive: [
       {
-        breakpoint: 1200, // Définir un point de rupture pour rendre le graphique responsive
+        breakpoint: 1200,
         options: {
           chart: {
             height: 150,

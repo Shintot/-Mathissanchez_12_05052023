@@ -3,7 +3,7 @@
     width: 20rem;
     height: 15rem;
     margin-left: 11%;
-    background-color: #b12c2c;
+    background-color: #e31111;
     border-radius: 1rem;
     box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
 }
@@ -14,11 +14,11 @@
         height: 12rem;
     }
     .line {
-        margin-top: 5rem !important;
+        margin-top: 2.8rem !important;
     }
 }
 
 .line {
-    margin-top: 7rem;
+    margin-top: 5.8rem;
 }
 

@@ -1,16 +1,17 @@
-import React, {useEffect, useState} from 'react';
+ import React, {useEffect, useState} from 'react';
 import Chart from 'react-apexcharts';
 import './SpiderWeb.css';
-import {fetchPerformanceData} from '../../api';
+
 import PropTypes from 'prop-types';
 
 
 /**
  * Composant SpiderWeb affichant un graphique de type radar avec les données de performance pour un utilisateur donné.
  * @param {number} id - L'ID de l'utilisateur pour lequel afficher les données de performance.
+ * @param fetchPerformanceData
  * @return {JSX.Element} Composant React pour le graphique de performance en radar.
  */
-const SpiderWeb = ({id}) => {
+const SpiderWeb = ({id,fetchPerformanceData}) => {
     const [chartData, setChartData] = useState([]);
 
     useEffect(() => {
@@ -31,6 +32,7 @@ const SpiderWeb = ({id}) => {
     ];
 
     const options = {
+        colors: ['#ff0000'],
         chart: {
             type: 'radar',
             toolbar: {

@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import './Proteines.css';
 import {GiMeal} from "react-icons/gi";
 import { useEffect, useState } from 'react';
-import {fetchProteines} from "../../api";
+
 
 
 /**
@@ -16,7 +16,7 @@ import {fetchProteines} from "../../api";
  * @example
  * <UserProteines id={1} />
  */
-const UserProteines = ({ id }) => {
+const UserProteines = ({ id ,fetchProteines}) => {
   const [proteines, setProteines] = useState(0);
 
   useEffect(() => {

@@ -4,6 +4,12 @@
     text-align: start;
 
 }
+.bravo {
+        text-align: start;
+margin-left: 10rem;
+    height: 1rem;
+    margin-top: -1rem;
+}
 
 .name {
     color: red;

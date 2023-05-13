@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import './UserProfile.css';
-import { fetchUserName } from '../../api';
 import PropTypes from 'prop-types';
 
 
@@ -10,7 +9,7 @@ import PropTypes from 'prop-types';
  * @param {number} props.id - L'identifiant de l'utilisateur.
  * @returns {JSX.Element} - Le composant UserMainComponent.
  */
-const UserMainComponent = ({ id }) => {
+const UserMainComponent = ({ id,fetchUserName }) => {
   const [name, setName] = useState('');
 
   useEffect(() => {
@@ -26,6 +25,7 @@ const UserMainComponent = ({ id }) => {
   return (
     <div>
       <h1 className="bonjour">Bonjour <span className="name">{name}</span></h1>
+      <p className="bravo">Bravo ! </p>
     </div>
   );
 };
