@@ -31,7 +31,7 @@ const UserMainComponent = ({ id,fetchUserName }) => {
 };
 
 UserMainComponent.propTypes = {
-  id: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
 };
 
 export default UserMainComponent;

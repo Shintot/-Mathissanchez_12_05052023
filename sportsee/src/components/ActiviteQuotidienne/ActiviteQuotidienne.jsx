@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Chart from 'react-apexcharts';
 import PropTypes from 'prop-types'; // Importer PropTypes depuis 'prop-types'
 import './ActiviteQuotidienne.css';
+import DataTransform from './DataTransform';
 
 
 /**
@@ -52,8 +53,8 @@ const ActiviteQuotidienne = ({ id , fetchActivity}) => {
           colors: ['transparent']
         },
     xaxis: {
-      categories: chartData.map(data => data.name),
-    },
+    categories: DataTransform.transformData(chartData.map(data => data.name)),
+  },
     yaxis: {
       opposite: true,
     },
@@ -112,7 +113,7 @@ const ActiviteQuotidienne = ({ id , fetchActivity}) => {
 };
 
 ActiviteQuotidienne.propTypes = {
-  id: PropTypes.number.isRequired, // Ajouter un propTypes pour l'ID en tant que chaîne de caractères requise
+  id: PropTypes.string.isRequired, // Ajouter un propTypes pour l'ID en tant que chaîne de caractères requise
 };
 
 export default ActiviteQuotidienne;

@@ -117,7 +117,7 @@ const DureeMoyenne = ({ id , fetchAverageSessions}) => {
 };
 
 DureeMoyenne.propTypes = {
-  id: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
 };
 
 export default DureeMoyenne;

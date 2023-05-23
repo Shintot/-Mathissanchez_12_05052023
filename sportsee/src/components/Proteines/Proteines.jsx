@@ -43,7 +43,7 @@ const UserProteines = ({ id ,fetchProteines}) => {
 };
 
 UserProteines.propTypes = {
-  id: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
 };
 
 export default UserProteines;

@@ -1,8 +1,8 @@
- import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import Chart from 'react-apexcharts';
 import './SpiderWeb.css';
-
 import PropTypes from 'prop-types';
+import Translations from './translation';
 
 
 /**
@@ -11,7 +11,7 @@ import PropTypes from 'prop-types';
  * @param fetchPerformanceData
  * @return {JSX.Element} Composant React pour le graphique de performance en radar.
  */
-const SpiderWeb = ({id,fetchPerformanceData}) => {
+const SpiderWeb = ({id, fetchPerformanceData}) => {
     const [chartData, setChartData] = useState([]);
 
     useEffect(() => {
@@ -43,7 +43,7 @@ const SpiderWeb = ({id,fetchPerformanceData}) => {
             text: undefined, // Vous pouvez ajouter un titre ici si vous en avez besoin
         },
         xaxis: {
-            categories: chartData.map(item => item.subject),
+            categories: chartData.map(item => Translations.translate(item.subject)),
         },
         yaxis: {
             min: 0,
@@ -73,7 +73,7 @@ const SpiderWeb = ({id,fetchPerformanceData}) => {
 };
 
 SpiderWeb.propTypes = {
-    id: PropTypes.number.isRequired,
+    id: PropTypes.string.isRequired,
 };
 
 export default SpiderWeb;

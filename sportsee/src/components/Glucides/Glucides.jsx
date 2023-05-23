@@ -44,7 +44,7 @@ const UserGlucides = ({ id,fetchGlucides }) => {
 };
 
 UserGlucides.propTypes = {
-  id: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
 };
 
 export default UserGlucides;

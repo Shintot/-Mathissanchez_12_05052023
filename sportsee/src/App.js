@@ -22,7 +22,7 @@ import {
     fetchScore,
     fetchPerformanceData,
     fetchUserName
-} from './api';
+} from './mock.js';
 
 function App() {
     const {id} = useParams();
